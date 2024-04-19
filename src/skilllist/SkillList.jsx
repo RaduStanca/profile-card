@@ -1,14 +1,44 @@
 import "./SkillList.css";
 import Skill from "../components/skill/Skill";
 
+const skills = [
+  {
+    skill: "HTML",
+    level: "advanced",
+    color: "#ff0000",
+  },
+
+  {
+    skill: "CSS",
+    level: "advanced",
+    color: "#0000ff",
+  },
+
+  {
+    skill: "JavaScript",
+    level: "beginner",
+    color: "#FFFF00",
+  },
+
+  {
+    skill: "Git+GitHub",
+    level: "advanced",
+    color: "#808080",
+  },
+
+  {
+    skill: "React",
+    level: "beginner",
+    color: "#00b4ff",
+  },
+];
+
 const SkillList = () => {
   return (
-    <div>
-      <Skill skill="React" emoji="🙏" color="#00b4ff" />
-      <Skill skill="JavaScript" emoji="💪" color="#FFFF00" />
-      <Skill skill="Html" emoji="💪" color="#ff0000" />
-      <Skill skill="Css" emoji="💪" color="#0000ff" />
-      <Skill skill="Git+GitHub" emoji="💪" color="#808080" />
+    <div className="skill-list">
+      {skills.map((skill) => (
+        <Skill skill={skill.skill} level={skill.level} color={skill.color} />
+      ))}
     </div>
   );
 };

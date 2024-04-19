@@ -1,10 +1,11 @@
 import "./Skill.css";
 
-const Skill = ({ skill, emoji, color }) => {
+const Skill = ({ skill, level, color }) => {
   return (
     <div className="skill" style={{ backgroundColor: color }}>
       <span>{skill}</span>
-      <span>{emoji} </span>
+      <span>{level === "advanced" && "💪"}</span>
+      <span>{level === "beginner" && "👶"}</span>
     </div>
   );
 };
