@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 body {
   font-family: "IBM Plex Mono", sans-serif;
   background-color: #f7f7f7;
@@ -18,7 +24,6 @@ body {
 }
 
 .card::after {
-  content: "";
   display: block;
 }
 
